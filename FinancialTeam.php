@@ -38,7 +38,7 @@
         </div>
         <div class="col-md-5">
           <h3>Project Two</h3>
-          <p>If want to cancel or update the previous bid you can click on the <b><i>Cancel a bid</i></b> button and the system asks you to choose the car model you want to cancel and then you can update the bidding if the expiration date is no reached.</p>
+          <p>If you want to cancel or update the previous bid you can click on the <b><i>Cancel a bid</i></b> button and the system asks you to choose the car model you want to cancel and then you can update the bidding if the expiration date is no reached.</p>
           <a class="btn btn-primary" href="#">Cancel a bid</a>
         </div>
       </div>
