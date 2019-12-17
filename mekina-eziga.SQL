@@ -1,0 +1,10 @@
+CREATE DATABASE MEKINA_EZIGA;
+CREATE TABLE Seller(id varchar(20),first_Name varchar(20),last_name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
+CREATE TABLE Dealer(dealer_id varchar(20),shop_Name varchar(20),email varchar(20),office_number varchar(20),city varchar(20),street varchar(20),delivery_option varchar(20),rating double);
+CREATE TABLE Buyer(id varchar(20),first_Name varchar(20),last_name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
+CREATE TABLE Mediator(id varchar(20),first_Name varchar(20),last_name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
+CREATE TABLE Cars(id varchar(20),color varchar(20),model varchar(20),year_of_production varchar(20),top_speed varchar(20),rating double);
+CREATE TABLE shop_manager(id varchar(20),full_Name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
+CREATE TABLE technical_team(id varchar(20),first_Name varchar(20),last_name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
+CREATE TABLE purchaser_team(id varchar(20),first_Name varchar(20),last_name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
+CREATE TABLE finacial_team(id varchar(20),first_Name varchar(20),last_name varchar(20),email varchar(20),password varchar(20),user_name varchar(20),address varchar(20),phone_Number int(10));
