@@ -1,0 +1,26 @@
+CREATE TABLE users (
+    user_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+    user_first varchar(256) not null,
+    user_last varchar(256) not null,
+    user_email varchar(256) not null,
+    user_uid varchar(256) not null,
+    user_pwd varchar(256) not null,
+    userType_id int(11) not null,
+    dealers_id int(11) not null,
+    index(userType_id),
+    index(dealers_id),
+    FOREIGN KEY (userType_id) REFERENCES userType(userType_id),
+    FOREIGN KEY (dealers_id) REFERENCES dealers(dealers_id)
+);
+CREATE TABLE dealers (
+    dealers_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+    dealers_name varchar(256) not null,
+    dealers_username varchar(256) not null,
+    dealers_address varchar(256) not null,
+    dealers_email varchar(256) not null
+);
+CREATE TABLE userType (
+    userType_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+    userType_name varchar(256) not null,
+    userType_permition varchar(256) not null
+);
