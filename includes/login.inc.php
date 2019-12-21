@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 				//De-hashing the paswrd
 				$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 				if ($hashedPwdCheck == false) {
-					header("Location: ../index.php?login=error");
+					header("Location: ../index.php?login=errord");
 					exit();
 				} elseif ($hashedPwdCheck == true) {
 					//Log in the user here
@@ -33,8 +33,18 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_first'] = $row['user_first'];
 					$_SESSION['u_last'] = $row['user_last'];
 					$_SESSION['u_email'] = $row['user_email'];
-					$_SESSION['u_uid'] = $row['user_uid'];
-					header("Location: ../user.php?login=success");
+					$_SESSION['u_type'] = $row['userType_id'];
+					if($_SESSION['u_type']==1)
+					header("Location: ../seller.php?login=success");
+				   else if ($_SESSION['u_type']==2) {
+					header("Location: ../buyer.php?login=success");
+					}
+					else if ($_SESSION['u_type']==3) {
+					header("Location: ../manager.php?login=success");
+					}
+					else if ($_SESSION['u_type']==4) {
+					header("Location: ../mediator.php?login=success");
+					}
 					exit();
 				}
 			}

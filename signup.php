@@ -1,5 +1,5 @@
 <?php 
-	include_once 'header.php';
+    include_once 'header.php';
  ?>
 
 
@@ -127,58 +127,8 @@
                             </li>
                         	</ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Apply as a User</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="first" class="form-control" placeholder="First Name " value="" />
-                                         
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="last" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="pwd" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="confpwd" class="form-control"  placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="maxl">
-                                            <p>What are you</p>
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="seller" checked>
-                                                    <span> SELLER </span> 
-                                                </label>
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="buyer">
-                                                    <span>BUYER</span> 
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email"   class="form-control" placeholder="Your Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text"  minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
-                                        </div>
-                                        <input type="submit" name="submit-user" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              
                             </div>
                     <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <h3  class="register-heading">Apply as a Hirer</h3>
@@ -204,7 +154,23 @@
                                             <input type="text" name="uid" maxlength="10" minlength="10" class="form-control" placeholder="Username" value="" />
                                            
                                         </div>
-				
+				 <div class="form-group">
+                                            <div class="maxl">
+                                            <p>What are you</p>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="1" checked>
+                                                    <span> SELLER </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="2">
+                                                    <span>BUYER</span> 
+                                                </label>
+                                                 <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="3">
+                                                    <span>dealer</span> 
+                                                </label>
+                                            </div>
+                                        </div>
 			
                                     </div>
                                     <div class="col-md-6">

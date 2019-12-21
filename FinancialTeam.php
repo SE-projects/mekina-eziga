@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-md-7">
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="img/dealer.jpg/600x300" alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="img/car.png/600x300" alt="">
           </a>
         </div>
         <div class="col-md-5">
@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-md-7">
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="img/car-for-sale2.jpg/600x300" alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="img/car.png/600x300" alt="">
           </a>
         </div>
         <div class="col-md-5">

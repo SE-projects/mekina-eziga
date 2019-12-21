@@ -1,7 +1,6 @@
 <?php
 
-if (isset($_POST['submit'])) {
-	
+if (isset($_POST['submit-dealer'])){
 	include_once 'dbh.inc.php';
 
 	$first = mysqli_real_escape_string($conn, $_POST['first']);
@@ -9,11 +8,22 @@ if (isset($_POST['submit'])) {
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-
+    $utype = mysqli_real_escape_string($conn, $_POST['gender']);
 	//Error handlers
 	//Check for empty fields
 	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
-		header ("Location: ../signup.php?signup=empty");
+		if(empty($first)){
+		header ("Location: ../signup.php?signup=delfi");
+		}else if(empty($last)){
+		header ("Location: ../signup.php?signup=la");
+		}else if(empty($email)){
+			header ("Location: ../signup.php?signup=em");
+		}else if(empty($uid)){
+			header ("Location: ../signup.php?signup=ui");
+		}else if(empty($pwd)){
+			header ("Location: ../signup.php?signup=pwd");
+		}else header ("Location: ../signup.php?signup=empty");
+		
 		exit();
 	} else {
 		//Check if input characters are valid
@@ -37,7 +47,7 @@ if (isset($_POST['submit'])) {
 					//Hashing the password
 					$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 					//Insert the user into the database
-					$sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd');";
+					$sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd,userType_id,dealers_id) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd','$utype','1');";
 					mysqli_query($conn, $sql);
 					header ("Location: ../signup.php?signup=success");
 					exit();
@@ -45,8 +55,6 @@ if (isset($_POST['submit'])) {
 			}
 		}
 	}
-
-
 } else {
 	header ("Location: ../signup.php");
 	exit();
