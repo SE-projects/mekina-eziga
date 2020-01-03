@@ -1,217 +1,407 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Title  -->
-    <title>Mekina Eziga </title>
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Obaju e-commerce template">
+    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
+    <meta name="keywords" content="">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <title>
+       Mekina Eziga
+    </title>
 
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <!-- theme stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- your stylesheet with modifications -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/respond.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png">
+
+
 
 </head>
 
 <body>
-    <!-- ##### Header Area Start ##### -->
-    <header class="header_area">
-      <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
-            <!-- Classy Menu -->
-        <nav class="classy-navbar" id="essenceNav">
-                <!-- Logo -->
-                <a class="nav-brand" href="#">Mekina Eziga</a>
-                <!-- Navbar Toggler -->
-                <div class="classy-navbar-toggler">
-                    <span class="navbarToggler"><span></span><span></span><span></span></span>
-                </div>
-                <!-- Menu -->
-          <div class="classy-menu">
-                    <!-- close btn -->
-                    <div class="classycloseIcon">
-                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                    </div>
-                    <!-- Nav Start -->
-            <div class="classynav">
-                        <ul>
-                            <li>
-<div class="megamenu">
-                <ul class="single-mega cn-col-4">
-                      
+
+ 	<?php $db = mysqli_connect('localhost','root','','shop')
+		or die('Error connecting to MySQL server.'); 
+
+		$query1 = "SELECT * FROM category ";
+		$result1 = mysqli_query($db, $query1);
+		$categories = mysqli_fetch_array($result1);
+
+	?>
+	<?php include 'header.php';?>
+	 <div class="navbar-collapse collapse" id="navigation">
+
+                <ul class="nav navbar-nav navbar-left">
+                 <?php
+                while($categories) { 
+                
+                    ?>
+                    
+                    <li class="inactive"><a href="category.php?CategoryID=<?php echo $categories['CategoryID'] ?>">
+                    <?php echo $categories['Category'];?></a>
+                    </li>
+                   <?php $categories = $result1->fetch_assoc();} ?>
                 </ul>
-                                  <ul class="single-mega cn-col-4">
-                                      
-                                  </ul>
-                                  <ul class="single-mega cn-col-4">
-                                      
-                                  </ul>
-                                    <div class="single-mega cn-col-4">
-                                        <img src="img/core-img/bg-6.jpg" alt="">
+
+            </div>
+            <!--/.nav-collapse -->
+
+    <div id="all">
+
+        <div id="content">
+
+            <div class="container">
+                <div class="col-md-12">
+                    <div id="main-slider">
+                        <div class="item">
+                            <img src="img/main-slider1.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="img/main-slider2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="img/main-slider3.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <!-- /#main-slider -->
+                </div>
+            </div>
+
+            <!-- *** ADVANTAGES HOMEPAGE ***
+ _________________________________________________________ -->
+            <div id="advantages">
+
+                <div class="container">
+                    <div class="same-height-row">
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-heart"></i>
+                                </div>
+
+                                <h3><a href="#">We love our customers</a></h3>
+                                <p>We are known to provide best possible service ever</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-tags"></i>
+                                </div>
+
+                                <h3><a href="#">Best prices</a></h3>
+                                <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height clickable">
+                                <div class="icon"><i class="fa fa-thumbs-up"></i>
+                                </div>
+
+                                <h3><a href="#">100% satisfaction guaranteed</a></h3>
+                                <p>Free returns on everything for 3 months.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+            <!-- /#advantages -->
+
+            <!-- *** ADVANTAGES END *** -->
+
+            <!-- *** HOT PRODUCT SLIDESHOW ***
+
+
+ _________________________________________________________ -->
+
+
+            <?php 
+
+				$query = "SELECT * FROM item order by ItemID DESC";
+				$result = mysqli_query($db, $query);
+				$row = mysqli_fetch_array($result);
+
+                $query2 = "SELECT * FROM dealers order by dealers_id DESC";
+                $result2 = mysqli_query($db, $query2);
+                $row2 = mysqli_fetch_array($result2);
+
+			?>
+
+
+            <div id="hot">
+
+                <div class="box">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <h2>REGISTERD DEALERS IN THE SYSTEM</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="product-slider">
+                        
+
+                <?php
+                 $count=1;
+                while($row2 && $count <=10) { 
+                
+                    ?>
+
+                 <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="dealershomephp?ItemNo=<?php echo $row['ItemID'] ?>">
+
+                                                <img src="<?php echo $row2['PhotosID'];?>" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+
+                                        <div class="back">
+                                            <a href="dealershome.php">
+                                              <img src="<?php echo $row2['PhotosID'];?>" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
                                     </div>
-                              </div>
-                          </li>
-                            <li><a href="#">Bid</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Make A Bid</a></li>
-                                    <li><a href="#">Cancel A Bid</a></li>
-                                    <li><a href="#">Notification</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Delivery Status</a></li>
-                          <li><a href="#">Rate Cars</a></li>
-						  <li><a href="#">Rate dealers shop</a></li>
-                        </ul>
-                                               </div>
-                    <!-- Nav End -->
-                </div>
-            </nav>
-
-            <!-- Header Meta Data -->
-            <div class="header-meta d-flex clearfix justify-content-end">
-                <!-- Search Area -->
-                <div class="search-area">
-                    <form action="#" method="post">
-                        <input type="search" name="search" id="headerSearch" placeholder="Search Cars">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-
-                <!-- Search Area -->
-                <div class="search-area">
-                    <form action="#" method="post">
-                        <input type="search" name="search" id="headerSearch" placeholder="Search Dealers">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-
-                <!-- Cart Area -->
-                <div class="cart-area"> </div>
-            </div>
-
-        </div>
-    </header>
-    <!-- ##### Header Area End ##### -->
-
-    <!-- ##### Right Side Cart Area ##### -->
-    <div class="cart-bg-overlay"></div>
-<!-- ##### Right Side Cart End ##### -->
-
-    <!-- ##### Welcome Area Start ##### -->
-    <section class="welcome_area bg-img background-overlay" style="background-image: url(img/core-img/car.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="hero-content">
-                      <h2><strong>New Collection</strong><br>
-                      </h2>
-                      <a href="#" class="btn essence-btn">view collection</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Welcome Area End ##### -->
-
-    <!-- ##### Top Catagory Area Start ##### -->    <!-- ##### Top Catagory Area End ##### -->
-
-    <!-- ##### CTA Area Start ##### -->
-    <div class="cta-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12"> </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### CTA Area End ##### -->
-
-    <!-- ##### New Arrivals Area Start ##### -->    <!-- ##### New Arrivals Area End ##### -->
-
-    <!-- ##### Brands Area Start ##### -->    <!-- ##### Brands Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area d-flex mb-30">
-                        <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a style="color: white; font-size: 24px"  href="#">Mekina Eziga</a>
+                                </div>
+                               
+                                </a>
+                                <div class="text" >
+                                    <h3><a href="dealershome.php?ItemNo=<?php echo $row2['ItemID'] ?>"><?php echo $row2['dealers_name']?></a></h3>
+                                                                   
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
                         </div>
-                        <!-- Footer Menu -->
+
+                       <?php $row2 = $result2->fetch_assoc();
+                            $count=$count+1;
+                        }
+                    ?>
 
                     </div>
                 </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area mb-30">
-                        <ul class="footer_widget_menu">
-                            
-                            
-                            <li><a href="#">Shipping and Delivery</a></li>
-                            <li><a href="#">Guides</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+                
+                <!-- /.container -->
             </div>
 
-            <div class="row align-items-end">
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area">
-                        <div class="footer_heading mb-30">
-                            <h6>Subscribe</h6>
-                        </div>
-                        <div class="subscribtion_form">
-                            <form action="#" method="post">
-                                <input type="email" name="mail" class="mail" placeholder="Your email here">
-                                <button type="submit" class="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                            </form>
+
+
+
+
+
+
+
+            <div id="hot">
+
+                <div class="box">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <h2>Latest Products</h2>
                         </div>
                     </div>
                 </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area">
-                        <div class="footer_social_area">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+                <div class="container">
+                    <div class="product-slider">
+                        
+
+                <?php
+                 $count=1;
+				while($row && $count <=10) { 
+				
+					?>
+
+				 <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php?ItemNo=<?php echo $row['ItemID'] ?>">
+                                                <img src="<?php echo $row['PhotosID'];?>" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php?ItemNo=<?php echo $row['ItemID'] ?>">
+                                                <img src="<?php echo $row['PhotosID'];?>" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.php?ItemNo=<?php echo $row['ItemID'] ?>" class="invisible">
+                                    <img src="img/product1.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php?ItemNo=<?php echo $row['ItemID'] ?>"><?php echo $row['ItemName']?></a></h3>
+                                    <p class="price">BIRR : <?php echo number_format($row['CurrentPrice'],2)?></p>
+									
+
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
                         </div>
+
+                       <?php $row = $result->fetch_assoc();
+                   			$count=$count+1;
+                   		}
+					?>
+
+					</div>
+                </div>
+
+                
+                <!-- /.container -->
+			</div>
+
+            <?php 
+				$query3 = "SELECT * FROM category";
+				$result3 = mysqli_query($db, $query3);
+				$row3 = mysqli_fetch_array($result3);
+
+				while($row3) { 
+
+				$query5 = "SELECT * FROM item Where CategoryID=$row3[CategoryID]";
+				$result5 = mysqli_query($db, $query5);
+				$row5 =mysqli_fetch_array($result5);
+
+
+			?>
+
+             <div id="hot">
+
+                <div class="box">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <h2><?php echo $row3['Category'];?></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="product-slider">
+                        
+
+                <?php
+				while($row5) { 
+				
+					?>
+
+				 <div class="item">
+                            <div class="product">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <a href="detail.php?ItemNo=<?php echo $row5['ItemID'] ?>">
+                                                <img src="<?php echo $row5['PhotosID'];?>" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="back">
+                                            <a href="detail.php?ItemNo=<?php echo $row5['ItemID'] ?>">
+                                                <img src="<?php echo $row5['PhotosID'];?>" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="detail.php?ItemNo=<?php echo $row5['ItemID'] ?>" class="invisible">
+                                    <img src="img/product1.jpg" alt="" class="img-responsive">
+                                </a>
+                                <div class="text">
+                                    <h3><a href="detail.php?ItemNo=<?php echo $row5['ItemID'] ?>"><?php echo $row5['ItemName']?></a></h3>
+                                    <p class="price">Rs : <?php echo number_format($row5['CurrentPrice'],2)?></p>
+									
+
+                                </div>
+                                <!-- /.text -->
+                            </div>
+                            <!-- /.product -->
+                        </div>
+
+                       <?php $row5 = $result5->fetch_assoc();}
+					?>
+
+					</div>
+                </div>
+
+                
+                <!-- /.container -->
+
+            </div>
+             <?php $row3 = $result3->fetch_assoc();}
+					?>
+            <!-- *** GET INSPIRED ***
+ _________________________________________________________ -->
+           
+
+            <!-- *** BLOG HOMEPAGE ***
+ _________________________________________________________ -->
+
+            <div class="box text-center" data-animate="fadeInUp">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h3 class="text-uppercase">Grab products for lowest prices</h3>
+
+                        <p class="lead">Start Bidding Keep on Winning 
+                        </p>
                     </div>
                 </div>
             </div>
 
+           
+
+            <!-- *** BLOG HOMEPAGE END *** -->
 
 
         </div>
-    </footer>
-    <!-- ##### Footer Area End ##### -->
+        <!-- /#content -->
 
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
+       <?php include 'footer.php';?>
+    
+
+    <!-- *** SCRIPTS TO INCLUDE ***
+ _________________________________________________________ -->
+    <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Classy Nav js -->
-    <script src="js/classy-nav.min.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/front.js"></script>
+
+
 
 </body>
 
