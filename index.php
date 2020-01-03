@@ -1,5 +1,5 @@
 <?php 
-	include_once 'header.php';
+	include_once 'header1.php';
  ?>
 <!--- Image Slider -->
 
@@ -11,7 +11,7 @@
 	</ul>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="img/mbackground.jpeg">
+			<img src="img1/mbackground.jpeg">
 			<div class="carousel-caption">
 				<h1 class="display-2">Mekina-Eziga</h1>
 				<h3>Used cars sales</h3>
@@ -20,10 +20,10 @@
 			</div>
 		</div>
 		<div class="carousel-item">
-				<img src="img/mbackground2.jpeg" alt="">
+				<img src="img1/mbackground2.jpeg" alt="">
 		</div>
 		<div class="carousel-item">
-				<img src="img/mbackground3.jpeg" alt="">
+				<img src="img1/mbackground3.jpeg" alt="">
 		</div>
 	</div>
 </div>
@@ -88,7 +88,7 @@
 			<a href="" class="btn btn-primary">Learn More</a>
 		</div>
 		<div class="col-lg-6">
-			<img src="img/desk1.jpeg" class="img-fluid">
+			<img src="img1/desk1.jpeg" class="img-fluid">
 		</div>
 	</div>
 </div>
@@ -98,51 +98,6 @@
 
 
   
-<<!--- Meet the team -->
-<div class="container-fluid padding">
-	<div class="row welcome text-center">
-		<div class="col-12">
-			<h1 class="display">sample of Car for sell</h1>
-		</div>
-		<hr>
-	</div>
-</div>
-
-<!--- Cards -->
-<div class="container-fluid padding">
-	<div class="row padding">
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" src="img/car-for-sale3.jpeg">
-				<div class="card-body">
-					<h4 class="card-title">lambo</h4>
-					<p class="card-text">John is an Internet entrepreneur with almost 20 years of experience.</p>
-					<a href="#" class="btn btn-outline-secondary">Make a bid</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" src="img/car-for-sale.jpg">
-				<div class="card-body">
-					<h4 class="card-title">classic cx-r</h4>
-					<p class="card-text">Mary is a designer with almost 10 years of digital design experience.</p>
-					<a href="#" class="btn btn-outline-secondary">Make a bid</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<img class="card-img-top" src="img/car-for-sale2.jpeg">
-				<div class="card-body">
-					<h4 class="card-title">Custome v8</h4>
-					<p class="card-text">Phil is a developer with over 5 years of web development experience.</p>
-					<a href="#" class="btn btn-outline-secondary">Make a bid</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <!--- Two Column Section -->
 <div class="container-fluid padding">
 		<div class="row padding">
@@ -153,7 +108,7 @@
 				
 			</div>
 			<div class="col-lg-6">
-				<img src="img/Philosophy.jpeg" class="img-fluid">
+				<img src="img1/Philosophy.jpeg" class="img-fluid">
 			</div>
 		</div>
 		<hr class="my-4">
@@ -180,7 +135,7 @@
 	<div class="container-fluid padding">
 		<div class="row text-center">
 			<div class="col-md-4">
-				<img src="img/mekina.png">
+				<img src="img1/mekina.png">
 				<hr class="light">
 				<p>555-555-5555</p>
 				<p>Mekina-eziga@myemail.com</p>

@@ -45,7 +45,7 @@
 				</li>
 					
 									
-				<button onclick="window.location.href = 'register.php';" type="submit" name="submit" class="btn btn-primary btn-lg" >Submit</button>
+				<button onclick="window.location.href = 'register.php';" type="submit" name="submit" class="btn btn-primary btn-lg" >Login</button>
 								
 						
 					
