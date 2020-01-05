@@ -21,7 +21,7 @@ if(isset($_SESSION['userid'])){
     <meta name="keywords" content="">
 
     <title>
-        MEKENA EZIGA
+         Mekina-Eziga Car Sales
     </title>
 
     <meta name="keywords" content="">
@@ -73,10 +73,8 @@ if(isset($_SESSION['userid'])){
                     <div class="box">
                         <h1>New account</h1>
 
-                        <p class="lead">Not our registered customer yet?</p>
-                        <p>With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!</p>
-                        <p class="text-muted">If you have any questions, please feel free to <a href="contact.html">contact us</a>, our customer service center is working for you 24/7.</p>
-
+                        <p class="lead">Not registered yet?</p>
+                        <p>With registration with us new cars and deals will be open for you!!</p>
                         <hr>
                         <?php
                         if(isset($_GET['err']) && $_GET['err'] == 2) {
@@ -151,9 +149,8 @@ if(isset($_SESSION['userid'])){
                     <div class="box">
                         <h1>Login</h1>
 
-                        <p class="lead">Already our customer?</p>
-                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
-                            mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p class="lead">Already have an account, huh.....</p>
+                        <p class="text-muted">Enter the following fields below </p>
 
                         <hr>
 
